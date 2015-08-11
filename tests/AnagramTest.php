@@ -68,6 +68,19 @@
             //Assert
             $this->assertEquals([true,true], $result);
         }
+
+        function test_compareWords_threeInputsAllFalse()
+        {
+            //Arrange
+            $test_Anagram = new Anagram;
+            $input = ['abc','def','ghi'];
+
+            //Act
+            $result = $test_Anagram->compareWords($input);
+
+            //Assert
+            $this->assertEquals([false,false], $result);
+        }
     }
 
 ?>
