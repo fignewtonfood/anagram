@@ -29,6 +29,19 @@
             //Assert
             $this->assertEquals(false, $result);
         }
+
+        function test_compareWords_twoLetterTrue()
+        {
+            //Arrange
+            $test_Anagram = new Anagram;
+            $input = ['ab','ba'];
+
+            //Act
+            $result = $test_Anagram->compareWords($input);
+
+            //Assert
+            $this->assertEquals(true, $result);
+        }
     }
 
 ?>
