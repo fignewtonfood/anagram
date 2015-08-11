@@ -16,12 +16,14 @@
             // print_r($first_sort);
             sort($second_array);
             // print_r($second_sort);
+            $output_array = array();
 
             if ($first_array == $second_array) {
-                return true;
+                array_push ($output_array, true);
             } else {
-                return false;
+                array_push ($output_array, false);
             }
+            return $output_array;
         }
     }
 

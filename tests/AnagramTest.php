@@ -14,7 +14,7 @@
             $result = $test_Anagram->compareWords($input);
 
             //Assert
-            $this->assertEquals(true, $result);
+            $this->assertEquals([true], $result);
         }
 
         function test_compareWords_oneLetterFalse()
@@ -27,10 +27,10 @@
             $result = $test_Anagram->compareWords($input);
 
             //Assert
-            $this->assertEquals(false, $result);
+            $this->assertEquals([false], $result);
         }
 
-        function test_compareWords_twoLetterTrue()
+        function test_compareWords_twoLettersTrue()
         {
             //Arrange
             $test_Anagram = new Anagram;
@@ -40,7 +40,20 @@
             $result = $test_Anagram->compareWords($input);
 
             //Assert
-            $this->assertEquals(true, $result);
+            $this->assertEquals([true], $result);
+        }
+
+        function test_compareWords_twoLettersFalse()
+        {
+            //Arrange
+            $test_Anagram = new Anagram;
+            $input = ['ab','cd'];
+
+            //Act
+            $result = $test_Anagram->compareWords($input);
+
+            //Assert
+            $this->assertEquals([false], $result);
         }
     }
 
