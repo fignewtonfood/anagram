@@ -1,0 +1,15 @@
+1.  Behavior: two inputs, one letter, same, compare
+    Input: ['a','a']
+    Output: true
+
+2.  Behavior: two inputs, one letter, different, compare
+    Input: ['a','b']
+    Output: false
+
+3.  Behavior: two inputs, two letters, same, compare
+    Input: ['ab', 'ba']
+    Output: true
+
+4.  Behavior: two inputs, two letters, different, compare
+    Input: ['ab', 'bc']
+    Output: false
