@@ -14,17 +14,14 @@
                 array_push($array_of_words, $split_array);
             }
 
-            $count = count($array_of_words);
-
             $master_word = array_shift($array_of_words);
 
             foreach ($array_of_words as $word) {
                 if ($master_word == $word){
-                    array_push ($output_array, true);
-                } else {
-                    array_push ($output_array, false);
+                    array_push ($output_array, next($input_words));
                 }
             }
+
             return $output_array;
         }
     }
