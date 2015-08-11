@@ -5,8 +5,8 @@
         function compareWords($input_words)
         {
             $array_of_words = array();
-
             $split_array =  array();
+            $output_array = array();
 
             foreach ($input_words as $input) {
                 $split_array = str_split($input);
@@ -14,16 +14,16 @@
                 array_push($array_of_words, $split_array);
             }
 
-            foreach ($array_of_words as $ordered_word) {
-                if ($ordered_word=>[] != 0) {
-                    if ($words[0] == $words)
-                }
-            }
+            $count = count($array_of_words);
 
-            if ($first_array == $second_array) {
-                array_push ($output_array, true);
-            } else {
-                array_push ($output_array, false);
+            $master_word = array_shift($array_of_words);
+
+            foreach ($array_of_words as $word) {
+                if ($master_word == $word){
+                    array_push ($output_array, true);
+                } else {
+                    array_push ($output_array, false);
+                }
             }
             return $output_array;
         }
