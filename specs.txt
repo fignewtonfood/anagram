@@ -1,15 +1,27 @@
 1.  Behavior: two inputs, one letter, same, compare
     Input: ['a','a']
-    Output: true
+    Output: [true]
 
 2.  Behavior: two inputs, one letter, different, compare
     Input: ['a','b']
-    Output: false
+    Output: [false]
 
 3.  Behavior: two inputs, two letters, same, compare
     Input: ['ab', 'ba']
-    Output: true
+    Output: [true]
 
 4.  Behavior: two inputs, two letters, different, compare
     Input: ['ab', 'bc']
-    Output: false
+    Output: [false]
+
+5.  Behavior: more than two inputs, three letters, same, compare
+    Input: ['abc', 'bac', 'cab']
+    Output: [true, true]
+
+6.  Behavior: more than two inputs, three letters, all different, compare
+    Input: ['abc', 'def', 'ghi']
+    Output: [false, false]
+
+7.  Behavior: more than two inputs, three letters, mixed outputs, compare
+    Input: ['abc', 'cab', 'def']
+    Output: [true, false]
