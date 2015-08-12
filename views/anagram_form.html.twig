@@ -1,0 +1,21 @@
+<html>
+<head>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
+    <title>Anagram Test</title>
+</head>
+<body>
+    <div class='container'>
+        <h1>Check yourself for anagrams, friend:</h1>
+        <form action='/results'>
+            <div class='form-group'>
+                <label for='master'>Word to check:</label>
+                <input id='master' name='master' class='form-control' type='text' placeholder='cat'>
+                <p>Words to compare against:</p>
+                <label for='words'>Separate by comma without a space:</label>
+                <input id='words' name='words' class='form-control' type='text' placeholder='act,tac'>
+            </div>
+            <button type='submit' class='btn-success'>Go!</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
+        <title>Your Anagrams</title>
+    </head>
+    <body>
+        <div='container'>
+            <h1>Here are your anagrams:</h1>
+            {% for word in array %}
+                <h2>{{ word }}</h2>
+            {% endfor %}
+        </div>
+    </body>
+</html>

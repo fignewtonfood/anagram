@@ -8,91 +8,99 @@
         {
             //Arrange
             $test_Anagram = new Anagram;
-            $input = ['a','a'];
+            // $input = ['a','a'];
+            $input1 = 'a';
+            $input2 = 'a';
 
             //Act
-            $result = $test_Anagram->compareWords($input);
+            $result = $test_Anagram->compareWords($input1, $input2);
 
             //Assert
-            $this->assertEquals([true], $result);
+            $this->assertEquals(['a'], $result);
         }
 
         function test_compareWords_oneLetterFalse()
         {
             //Arrange
             $test_Anagram = new Anagram;
-            $input = ['a','b'];
+            $input1 = 'a';
+            $input2 = 'b';
 
             //Act
-            $result = $test_Anagram->compareWords($input);
+            $result = $test_Anagram->compareWords($input1, $input2);
 
             //Assert
-            $this->assertEquals([false], $result);
+            $this->assertEquals(null, $result);
         }
 
         function test_compareWords_twoLettersTrue()
         {
             //Arrange
             $test_Anagram = new Anagram;
-            $input = ['ab','ba'];
+            $input1 = 'ab';
+            $input2 = 'ba';
 
             //Act
-            $result = $test_Anagram->compareWords($input);
+            $result = $test_Anagram->compareWords($input1, $input2);
 
             //Assert
-            $this->assertEquals([true], $result);
+            $this->assertEquals('ba', $result);
         }
 
         function test_compareWords_twoLettersFalse()
         {
             //Arrange
             $test_Anagram = new Anagram;
-            $input = ['ab','cd'];
+            $input1 = 'ab';
+            $input2 = 'cd';
 
             //Act
-            $result = $test_Anagram->compareWords($input);
+            $result = $test_Anagram->compareWords($input1, $input2);
 
             //Assert
-            $this->assertEquals([false], $result);
+            $this->assertEquals(null, $result);
         }
 
         function test_compareWords_threeInputsAllTrue()
         {
             //Arrange
             $test_Anagram = new Anagram;
-            $input = ['abc','bac','cab'];
+            $input1 = 'abc';
+            $input2 = 'bac,cab';
 
             //Act
-            $result = $test_Anagram->compareWords($input);
+            $result = $test_Anagram->compareWords($input1,$input2);
 
             //Assert
-            $this->assertEquals([true,true], $result);
+            $this->assertEquals(['bac','cab'], $result);
         }
 
         function test_compareWords_threeInputsAllFalse()
         {
             //Arrange
             $test_Anagram = new Anagram;
-            $input = ['abc','def','ghi'];
+            $input1 = 'abc';
+            $input2 = 'def,ghi';
 
             //Act
-            $result = $test_Anagram->compareWords($input);
+            $result = $test_Anagram->compareWords($input1, $input2);
 
             //Assert
-            $this->assertEquals([false,false], $result);
+            $this->assertEquals(null, $result);
         }
 
         function test_compareWords_threeInputsMixedOutput()
         {
             //Arrange
             $test_Anagram = new Anagram;
-            $input = ['abc','cab','def'];
+            $input1 = 'abc';
+            $input2 = 'cab,def';
 
             //Act
-            $result = $test_Anagram->compareWords($input);
+            $result = $test_Anagram->compareWords($input1, $input2);
 
             //Assert
-            $this->assertEquals([true,false], $result);
+            $this->assertEquals('cab', $result);
         }
     }
 
